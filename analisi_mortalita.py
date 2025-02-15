@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 url = "https://dati.regione.sicilia.it/dataset/1550ec68-e4d2-49ee-b86e-6556b6cae303/resource/5c7f9425-f36e-47b3-9854-3d277b41bb7d/download/cause_morte.json"
-response = requests.get(url)
+response = requests.get(url, timeout = 20)
 data = response.json()
 df = pd.DataFrame(data)
 
